@@ -107,30 +107,31 @@ def create_df_coords(video_file):
 # Streamlit app
 st.title("Video Upload, Keypoints Extraction, and Prediction App")
 
-# Load the PyCaret model
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
 # Video upload
 video_file = st.file_uploader("Upload a video", type=["mp4", "avi", "mov"])
 
 # Process video if uploaded
 if video_file:
     # Create the temp_video directory if it doesn't exist
-    if not os.path.exists("temp_video"):
-        os.makedirs("temp_video")
+    #if not os.path.exists("temp_video"):
+    #    os.makedirs("temp_video")
 
     # Save uploaded file temporarily
-    temp_file_path = os.path.join("temp_video", video_file.name)
+    temp_file_path = os.path.join("", video_file.name)
     with open(temp_file_path, "wb") as f:
         f.write(video_file.getbuffer())
 
-    st.write(f"Video saved to {temp_file_path}")
+    #st.write(f"Video saved to {temp_file_path}")
 
     # Process the video and get keypoints in DataFrame
     keypoints_df = create_df_coords(temp_file_path)
 
-    st.success("Keypoints extracted and saved to DataFrame")
+    #st.success("Keypoints extracted and saved to DataFrame")
+    
+    # Delete the temporary video file after predictions are made
+    if os.path.exists(temp_file_path):
+        os.remove(temp_file_path)
+        #st.write(f"Temporary file {video_file.name} deleted.")
 
     # Dropping columns containing 'person', 'nose', 'eye', or 'ear' in their names
     columns_to_drop = keypoints_df.filter(regex='person|nose|eye|ear').columns
@@ -140,18 +141,14 @@ if video_file:
     keypoints_df.fillna(0, inplace=True)
 
     # Display the updated DataFrame
-    st.write("Processed Keypoints Data:")
-    st.dataframe(keypoints_df.head())
+    #st.write("Processed Keypoints Data:")
+    #st.dataframe(keypoints_df.head())
 
     # Make predictions using the PyCaret model
-    st.write("Making predictions...")
+    #st.write("Making predictions...")
+    # Load the PyCaret model
+    model = load_model('model')
     predictions = model.predict(keypoints_df)
 
     # Display the predictions
-    st.write("Predictions:")
-    st.dataframe(predictions.head())
-
-    # Delete the temporary video file after predictions are made
-    if os.path.exists(temp_file_path):
-        os.remove(temp_file_path)
-        st.write(f"Temporary file {video_file.name} deleted.")
+    st.write("Yoga form is ", predictions[0])
