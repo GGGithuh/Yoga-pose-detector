@@ -4,6 +4,8 @@ This project is a Computer Vision Project using YOLOv8m model for posture analys
 to detect if the yoga pose taken by a person is in the correct sequence or not. 
 We experimented with MediaPipe too. 
 
+Limit 200MB, mp4,avi,mov,mpeg
+
 Key Components:
 - Model: YOLOv8m for pose detection
 - Keypoints: Defined in KEYPOINT_DICT, covering essential joints and body parts,
