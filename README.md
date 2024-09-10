@@ -33,7 +33,8 @@ Key Components:
 
 Process: 
 
-We had the task of converting the 'Surya Namaskar' Yoga pose' into a digtal sequence for the computer model to analyse if its ok or not. In other words we had to convert 
+We had the task of converting the 'Surya Namaskar' Yoga pose' into a digtal sequence for the computer model to analyse if its ok or not. In other words we had to convert a one minute video into a digital frame the computer could analyse.
+
 
 
 <img width="233" alt="Screenshot 2024-09-11 at 6 43 29 AM" src="https://github.com/user-attachments/assets/4d01d460-6654-4ae5-be73-7465a5df59e2">
@@ -41,6 +42,12 @@ We had the task of converting the 'Surya Namaskar' Yoga pose' into a digtal sequ
 
 
 <img width="450" alt="Screenshot 2024-09-11 at 6 44 15 AM" src="https://github.com/user-attachments/assets/ccc7931a-224c-4f9a-ab5e-fae0df09399f">
+
+Our videos were 1 minute long with a frame rate of 30 fps(frames per second), so we decided to capture the videos as follows:
+We will set a counter to track the number of frames processed by the code, as it loops through the video,  frame_index is incremented after each frame is read in the video. It’s used to determine, which frames to process, based on our conditions, e.g. every 60th frame.
+
+This way we extracted 30 frames from each video.
+
 
 
 
