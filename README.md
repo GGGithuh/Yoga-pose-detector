@@ -20,8 +20,8 @@ For live trials, please ensure your right profile faces the camera, with a dista
 
 Data Source:
 As we are focusing on an authentic version not practised by many, we went ahead and recorded our own
-one minute videos for 'Good' and ''Bad' which were used to train the model how the correct 'Surya Namaskar' is to be performed.
-We encountered difficulties here as some of the videos didn't have the correct lighting and some were did not capture the required body joints called 'key point' to digitise the human body movements. We tried using Media Pipe, then tried using YOLOv8m for this purpose.
+one minute videos for 'Good' and 'Bad' which were used to train the model as to how the correct 'Surya Namaskar' is to be performed. The practitioners of this authentic version, do not perform it non-stop more than 16-18 times as it can be very strenuous.
+We encounteredmore difficulties here as some of the videos didn't have the correct lighting and some did not capture the required body joints called 'key point' to digitise the human body movements. We tried using Media Pipe, then tried using YOLOv8m for this purpose.
 
 Key Components:
 - Model: YOLOv8m for pose detection
