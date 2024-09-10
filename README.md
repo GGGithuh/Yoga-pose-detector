@@ -1,4 +1,4 @@
-<img width="452" alt="image" src="https://github.com/user-attachments/assets/d8083de9-b34d-4120-a3cb-36d9a8764871">Yoga form detector using YOLOv8m
+Yoga form detector using YOLOv8m
 
 This project is a Computer Vision Project using YOLOv8m model for posture analysis, 
 to detect if the yoga pose taken by a person is correct or not. 
