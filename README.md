@@ -2,7 +2,15 @@ Yoga form detector using YOLOv8m
 
 This project is a Computer Vision Project using YOLOv8m model for posture analysis, 
 to detect if the yoga pose taken by a person is in the correct sequence or not. 
-We experimented with MediaPipe too. 
+
+Problem Statement: 
+With the increasing popularity of yoga, many people want to learn and practice it on their own. However there are many versions taught as 'Sun Salutation Type A', 'Sun Salutation Type B', etc which do not do justice to the age old reputation of Surya Namaskar as a complete body workout. We are focusing on this  version taught for generations. 
+
+Solution:
+Here is an attempt to develop a tool that can help learners identify their pose. 
+
+Impact:
+
 
 We have created a Streamlit App with the link: [
 ](https://yoga-pose-detector.streamlit.app/)
