@@ -32,6 +32,7 @@ Key Components:
 - Video Processing: Processes video frames, extracts keypoints, and stores them in a CSV file
 
 Process: 
+
 We had the task of converting the 'Surya Namaskar' Yoga pose' into a digtal sequence for the computer model to analyse if its ok or not. In other words we had to convert 
 
 
